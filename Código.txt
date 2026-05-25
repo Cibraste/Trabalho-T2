@@ -9,9 +9,9 @@ struct pessoa {
     char endereco[100];
     char endereco1[100];
 };
+// variáveis presentes no código
 int opcao;
-int dados;
-int err = 0;
+int err = 0; // ao final de cada caminho, o err vira 1 e envia para a pagina de procurar outro arquivo ou fechar
 int continuar;
 int pe4 = 0; //pessoa 4
 int pe5 = 0; //pessoa 5
@@ -19,8 +19,10 @@ int pe6 = 0; //pessoa 6
 int pe7 = 0; //pessoa 7
 int pe8 = 0; //pessoa 8
 int pe9 = 0; //pessoa 9
-int num = 4; //arquivo
+int num = 4; //slot de pessoa para criar
+
 int main(){;
+//pessoa 1 2 e 3 ja vem feitas, e as pessoas 4 a 9 são customizaveis
     struct pessoa p1;
         p1.idade = 19;
         strcpy(p1.endereco, "Rua Aquarios");
@@ -39,6 +41,8 @@ int main(){;
     struct pessoa p7;
     struct pessoa p8;
     struct pessoa p9;
+
+//menu
 do{
     opcao = NULL;
     printf("+------------------------------+\n");
@@ -48,6 +52,8 @@ do{
     printf("| [1] Primeiro arquivo         |\n");
     printf("| [2] Segundo arquivo          |\n");
     printf("| [3] Terceiro arquivo         |");
+
+//dependendo de quantas pessoas foram criadas, a lista se extende, mostrando mais opções
     if (pe4 == 0){
     } else {
         printf("\n| [4] Quarto arquivo           |");
@@ -172,7 +178,7 @@ if (opcao == num && pe4 == 0) { //criação do quarto arquivo
         scanf("%s %s", p4.endereco, p4.endereco1);
     system("clear || cls");
 }   else { 
-    if (opcao == num && pe5 == 0) { //criação do quarto arquivo
+    if (opcao == num && pe5 == 0) { // criação do quinto arquivo
     system("clear || cls");
     printf("\nDIGITE O PRIMEIRO E ULTIMO NOME\n> ");
         scanf("%s %s", p5.nome, p5.nome1, pe5++, num++);
@@ -182,7 +188,7 @@ if (opcao == num && pe4 == 0) { //criação do quarto arquivo
         scanf("%s %s", p5.endereco, p5.endereco1);
     system("clear || cls");
     } else {
-        if (opcao == num && pe6 == 0) { //criação do quarto arquivo
+        if (opcao == num && pe6 == 0) { //criação do sexto arquivo
     system("clear || cls");
     printf("\nDIGITE O PRIMEIRO E ULTIMO NOME\n> ");
         scanf("%s %s", p6.nome, p6.nome1, pe6++, num++);
@@ -192,7 +198,7 @@ if (opcao == num && pe4 == 0) { //criação do quarto arquivo
         scanf("%s %s", p6.endereco, p6.endereco1);
     system("clear || cls");
     } else {
-        if (opcao == num && pe7 == 0) { //criação do quarto arquivo
+        if (opcao == num && pe7 == 0) { //criação do sétimo arquivo
     system("clear || cls");
     printf("\nDIGITE O PRIMEIRO E ULTIMO NOME\n> ");
         scanf("%s %s", p7.nome, p7.nome1, pe7++, num++);
@@ -202,7 +208,7 @@ if (opcao == num && pe4 == 0) { //criação do quarto arquivo
         scanf("%s %s", p7.endereco, p7.endereco1);
     system("clear || cls");
     } else {
-        if (opcao == num && pe8 == 0) { //criação do quarto arquivo
+        if (opcao == num && pe8 == 0) { //criação do oitavo arquivo
     system("clear || cls");
     printf("\nDIGITE O PRIMEIRO E ULTIMO NOME\n> ");
         scanf("%s %s", p8.nome, p8.nome1, pe8++, num++);
@@ -212,7 +218,7 @@ if (opcao == num && pe4 == 0) { //criação do quarto arquivo
         scanf("%s %s", p8.endereco, p8.endereco1);
     system("clear || cls");
         } else {
-            if (opcao == num && pe9 == 0) { //criação do quarto arquivo
+            if (opcao == num && pe9 == 0) { //criação do nono arquivo
         system("clear || cls");
     printf("\nDIGITE O PRIMEIRO E ULTIMO NOME\n> ");
         scanf("%s %s", p9.nome, p9.nome1, pe9++, num++);
@@ -237,14 +243,14 @@ if (opcao == num && pe4 == 0) { //criação do quarto arquivo
             switch (continuar){
                 case 1:
                     system("clear || cls");
-                    break; //ao responder 1, o case 1 acaba e repete a pergunta anterior com do/while
+                    break; //ao responder 1, o case repete a pergunta anterior com do/while
                 case 2:
                     exit(0);
                 default:
                     system("clear || cls");
                     printf("Numero invalido\n------------------------------");
                     printf("+------------------------------+");
-            }  //switch continuar
+            }
             err = 0;
         } while (continuar != 0, continuar != 1);
     }

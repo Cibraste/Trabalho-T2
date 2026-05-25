@@ -1,0 +1,251 @@
+// Trabalho de programação - Gabriel Camargo Lima e Samuel Capuzzo Marques
+#include <stdio.h>
+#include <stdlib.h>
+#include <string>
+struct pessoa {
+    char nome[100];
+    char nome1[100];
+    int idade;
+    char endereco[100];
+    char endereco1[100];
+};
+int opcao;
+int dados;
+int err = 0;
+int continuar;
+int pe4 = 0; //pessoa 4
+int pe5 = 0;
+int pe6 = 0;
+int pe7 = 0;
+int pe8 = 0;
+int pe9 = 0;
+int num = 4; //arquivo
+int main(){;
+    struct pessoa p1;
+        p1.idade = 19;
+        strcpy(p1.endereco, "Rua Aquarios");
+        strcpy(p1.nome, "Dominic Binibom");
+    struct pessoa p2;
+        p2.idade = 20;
+        strcpy(p2.endereco, "Rua Tridente do Sul");
+        strcpy(p2.nome, "Paulo Rodrigues");
+    struct pessoa p3;
+        p3.idade = 30;
+        strcpy(p3.endereco, "Rua Iones Lamal");
+        strcpy(p3.nome, "Vanessa Carvalho");
+    struct pessoa p4;
+    struct pessoa p5;
+    struct pessoa p6;
+    struct pessoa p7;
+    struct pessoa p8;
+    struct pessoa p9;
+do{
+    opcao = NULL;
+    printf("+------------------------------+\n");
+    printf("|    [CADASTRO DE USUARIOS]    |\n");
+    printf("+------------------------------+\n");
+    printf("| [0] Fechar programa          |\n");
+    printf("| [1] Primeiro arquivo         |\n");
+    printf("| [2] Segundo arquivo          |\n");
+    printf("| [3] Terceiro arquivo         |");
+    if (pe4 == 0){
+    } else {
+        printf("\n| [4] Quarto arquivo           |");
+        if (pe5 == 0){
+        } else {
+            printf("\n| [5] Quinto arquivo           |");
+            if (pe6 == 0){
+            } else {
+                printf("\n| [6] Sexto arquivo            |");
+                if (pe7 == 0){
+                } else {
+                    printf("\n| [7] Setimo arquivo           |");
+                    if (pe8 == 0){
+                    } else {
+                        printf("\n| [8] Oitavo arquivo           |");
+                        if (pe9 == 0){
+                        } else {
+                            printf("\n| [9] Nono arquivo             |");
+                        }       
+                    }
+                }
+            }
+        }
+    }
+    if (num < 10) {
+    printf("\n| [%d] Criar arquivo            |", num);
+    }
+    printf("\n+------------------------------+");
+    printf("\nDigite o numero do arquivo desejado\n> ");
+    scanf("%d", &opcao);
+    switch (opcao){
+        case 0:
+            exit(0);
+        case 1:
+            system("clear || cls");
+            printf("+------------------------------+");
+            printf("\n| Nome: [%s]", p1.nome, err++);
+            printf("\n| Idade: [%d]", p1.idade);
+            printf("\n| Endereco: [%s]\n", p1.endereco);
+            break;
+        case 2:
+            system("clear || cls");
+            printf("+------------------------------+");
+            printf("\n| Nome: [%s]", p2.nome, err++);
+            printf("\n| Idade: [%d]", p2.idade);
+            printf("\n| Endereco: [%s]\n", p2.endereco);
+            break;
+        case 3:
+            system("clear || cls");
+            printf("+------------------------------+");
+            printf("\n| Nome: [%s]", p3.nome, err++);
+            printf("\n| Idade: [%d]", p3.idade);
+            printf("\n| Endereco: [%s]\n", p3.endereco);
+            break;
+        case 4:
+            if (pe4 == 1) {
+                system("clear || cls");
+                printf("+------------------------------+");
+                printf("\n| Nome: [%s %s]", p4.nome, p4.nome1, err++);
+                printf("\n| Idade: [%d]", p4.idade);
+                printf("\n| Endereco: [Rua %s %s]\n", p4.endereco, p4.endereco1);
+            }
+        break;
+        case 5:
+            if (pe5 == 1) {
+                system("clear || cls");
+                printf("+------------------------------+");
+                printf("\n| Nome: [%s %s]", p5.nome, p5.nome1, err++);
+                printf("\n| Idade: [%d]", p5.idade);
+                printf("\n| Endereco: [Rua %s %s]\n", p5.endereco, p5.endereco1);
+            }
+        break;
+        case 6:
+            if (pe6 == 1) {
+                system("clear || cls");
+                printf("+------------------------------+");
+                printf("\n| Nome: [%s %s]", p6.nome, p6.nome1, err++);
+                printf("\n| Idade: [%d]", p6.idade);
+                printf("\n| Endereco: [Rua %s %s]\n", p6.endereco, p6.endereco1);
+            }
+        break;
+        case 7:
+            if (pe7 == 1) {
+                system("clear || cls");
+                printf("+------------------------------+");
+                printf("\nNome: [%s %s]", p7.nome, p7.nome1, err++);
+                printf("\nIdade: [%d]", p7.idade);
+                printf("\nEndereco: [Rua %s %s]\n", p7.endereco, p7.endereco1);
+            }
+        break;
+        case 8:
+            if (pe8 == 1) {
+                system("clear || cls");
+                printf("+------------------------------+");
+                printf("\nNome: [%s %s]", p8.nome, p8.nome1, err++);
+                printf("\nIdade: [%d]", p8.idade);
+                printf("\nEndereco: [Rua %s %s]\n", p8.endereco, p8.endereco1);
+            }
+        break;
+        case 9:
+            if (pe9 == 1) {
+                system("clear || cls");
+                printf("+------------------------------+");
+                printf("\nNome: [%s %s]", p9.nome, p9.nome1, err++);
+                printf("\nIdade: [%d]", p9.idade);
+                printf("\nEndereco: [Rua %s %s]\n", p9.endereco, p9.endereco1);
+            }
+        break;
+    default:
+        printf("\nARQUIVO INEXISTENTE\n", err++);
+        printf("+------------------------------+");
+}; // switch opcao
+if (opcao == num && pe4 == 0) { //criação do quarto arquivo
+    system("clear || cls");
+    printf("\nDIGITE O PRIMEIRO E ULTIMO NOME\n> ");
+        scanf("%s %s", p4.nome, p4.nome1, pe4++, num++);
+    printf("DIGITE A IDADE\n> ");
+        scanf("%d", &p4.idade);
+    printf("DIGITE O PRIMEIRO E ULTIMO NOME DA RUA\n> Rua ");
+        scanf("%s %s", p4.endereco, p4.endereco1);
+    system("clear || cls");
+}   else { 
+    if (opcao == num && pe5 == 0) { //criação do quarto arquivo
+    system("clear || cls");
+    printf("\nDIGITE O PRIMEIRO E ULTIMO NOME\n> ");
+        scanf("%s %s", p5.nome, p5.nome1, pe5++, num++);
+    printf("DIGITE A IDADE\n> ");
+        scanf("%d", &p5.idade);
+    printf("DIGITE O PRIMEIRO E ULTIMO NOME DA RUA\n> Rua ");
+        scanf("%s %s", p5.endereco, p5.endereco1);
+    system("clear || cls");
+    } else {
+        if (opcao == num && pe6 == 0) { //criação do quarto arquivo
+    system("clear || cls");
+    printf("\nDIGITE O PRIMEIRO E ULTIMO NOME\n> ");
+        scanf("%s %s", p6.nome, p6.nome1, pe6++, num++);
+    printf("DIGITE A IDADE\n> ");
+        scanf("%d", &p6.idade);
+    printf("DIGITE O PRIMEIRO E ULTIMO NOME DA RUA\n> Rua ");
+        scanf("%s %s", p6.endereco, p6.endereco1);
+    system("clear || cls");
+    } else {
+        if (opcao == num && pe7 == 0) { //criação do quarto arquivo
+    system("clear || cls");
+    printf("\nDIGITE O PRIMEIRO E ULTIMO NOME\n> ");
+        scanf("%s %s", p7.nome, p7.nome1, pe7++, num++);
+    printf("DIGITE A IDADE\n> ");
+        scanf("%d", &p7.idade);
+    printf("DIGITE O PRIMEIRO E ULTIMO NOME DA RUA\n> Rua ");
+        scanf("%s %s", p7.endereco, p7.endereco1);
+    system("clear || cls");
+    } else {
+        if (opcao == num && pe8 == 0) { //criação do quarto arquivo
+    system("clear || cls");
+    printf("\nDIGITE O PRIMEIRO E ULTIMO NOME\n> ");
+        scanf("%s %s", p8.nome, p8.nome1, pe8++, num++);
+    printf("DIGITE A IDADE\n> ");
+        scanf("%d", &p8.idade);
+    printf("DIGITE O PRIMEIRO E ULTIMO NOME DA RUA\n> Rua ");
+        scanf("%s %s", p8.endereco, p8.endereco1);
+    system("clear || cls");
+        } else {
+            if (opcao == num && pe9 == 0) { //criação do quarto arquivo
+        system("clear || cls");
+    printf("\nDIGITE O PRIMEIRO E ULTIMO NOME\n> ");
+        scanf("%s %s", p9.nome, p9.nome1, pe9++, num++);
+    printf("DIGITE A IDADE\n> ");
+        scanf("%d", &p9.idade);
+    printf("DIGITE O PRIMEIRO E ULTIMO NOME DA RUA\n> Rua ");
+        scanf("%s %s", p9.endereco, p9.endereco1);
+    system("clear || cls");
+            }
+        }
+    }
+}
+    }
+    if (err == 1) {
+        do{
+            printf("+------------------------------+\n");
+            printf("Deseja procurar outro arquivo?");
+            printf("\n[1] Sim");
+            printf("\n[2] Nao\n> ");
+                scanf("%d", &continuar); //envia a resposta para a variável continuar
+            switch (continuar){
+                case 1:
+                    system("clear || cls");
+                    break; //ao responder 1, o case 1 acaba e repete a pergunta anterior com do/while
+                case 2:
+                    exit(0);
+                default:
+                    system("clear || cls");
+                    printf("Numero invalido\n------------------------------");
+                    printf("+------------------------------+");
+            }  //switch continuar
+            err = 0;
+        } while (continuar != 0, continuar != 1);
+    }
+ } //else
+} while (continuar = 1);
+return 0;
+}; // int main

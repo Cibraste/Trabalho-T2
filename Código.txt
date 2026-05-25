@@ -14,11 +14,11 @@ int dados;
 int err = 0;
 int continuar;
 int pe4 = 0; //pessoa 4
-int pe5 = 0;
-int pe6 = 0;
-int pe7 = 0;
-int pe8 = 0;
-int pe9 = 0;
+int pe5 = 0; //pessoa 5
+int pe6 = 0; //pessoa 6
+int pe7 = 0; //pessoa 7
+int pe8 = 0; //pessoa 8
+int pe9 = 0; //pessoa 9
 int num = 4; //arquivo
 int main(){;
     struct pessoa p1;
@@ -160,6 +160,8 @@ do{
         printf("\nARQUIVO INEXISTENTE\n", err++);
         printf("+------------------------------+");
 }; // switch opcao
+
+// Criação de novo arquivo
 if (opcao == num && pe4 == 0) { //criação do quarto arquivo
     system("clear || cls");
     printf("\nDIGITE O PRIMEIRO E ULTIMO NOME\n> ");
@@ -224,6 +226,7 @@ if (opcao == num && pe4 == 0) { //criação do quarto arquivo
     }
 }
     }
+
     if (err == 1) {
         do{
             printf("+------------------------------+\n");
